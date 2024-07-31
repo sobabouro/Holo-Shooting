@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-6057353555289520975
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 3bc6d0bae0753024195b0d6158fcece3
+  m_EffectName: Attenuation
+  m_MixLevel: f19eb85f80dfef143aac08e27fc7dbbb
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SoundMixer
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters:
+  - guid: 1b052c217a4fe9946914b7d2893bd07f
+    name: fireSoundVolume
+  - guid: b65ea7a55dfd61f4982f21247c9290a2
+    name: fireSoundPitch
+  - guid: 0b952b878cedc3a49b5ce8f9055fee59
+    name: fireSoundShiftPitch
+  m_AudioMixerGroupViews:
+  - guids:
+    - 9b1239f3da57d2246a55c0ded35dde49
+    - 90a367e148bd5454d84810ce2e8bd579
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 9b1239f3da57d2246a55c0ded35dde49
+  m_Children:
+  - {fileID: 8051762954894886716}
+  m_Volume: 8f56475b9de8e374a8d8971e99f9e329
+  m_Pitch: 32eb5f24f095ca2458b9af8ccb0380a5
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 1fa0c19b70c13b341bdfbb965527ef37
+  m_EffectName: Attenuation
+  m_MixLevel: d5127e7f55b15ab488bdaa8923879467
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: db2a3fa546f93964bb5ecfdce6798826
+  m_FloatValues:
+    b65ea7a55dfd61f4982f21247c9290a2: 1
+  m_TransitionOverrides: {}
+--- !u!244 &5058369707374506959
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 880172a1666b9e44c9acee34f0c0525b
+  m_EffectName: Pitch Shifter
+  m_MixLevel: 049f627eed1ed6541bd5c215ef63c618
+  m_Parameters:
+  - m_ParameterName: Pitch
+    m_GUID: 0b952b878cedc3a49b5ce8f9055fee59
+  - m_ParameterName: FFT size
+    m_GUID: 247d3e30c9944684fb635aae6b4e6966
+  - m_ParameterName: Overlap
+    m_GUID: 8f97e0c77a6e8ac4792dc1962b0da529
+  - m_ParameterName: Max channels
+    m_GUID: aaf90e80c2e8be44297960affcb8802b
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &8051762954894886716
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SE_fire
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 90a367e148bd5454d84810ce2e8bd579
+  m_Children: []
+  m_Volume: 1b052c217a4fe9946914b7d2893bd07f
+  m_Pitch: b65ea7a55dfd61f4982f21247c9290a2
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -6057353555289520975}
+  - {fileID: 5058369707374506959}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
